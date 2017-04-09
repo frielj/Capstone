@@ -1,1 +1,49 @@
+using NPGSQL library (http://www.npgsql.org)
 
+
+using(var dbConn = new NpgConn(server, port, userID, userPass, DB))
+{
+  dbConn.open();
+  
+  using(var dbCmd = new NpgCmd())
+  {
+    cmd.Connection = dbConn;
+    
+    //http://stackoverflow.com/questions/13297563/read-and-parse-a-json-file-in-c-sharp//
+    using( var r = new StreamReader("file.json"))
+    {
+      string json = r.ReadToEnd();
+      List<Item> info = JsonConvert.DeserializedObject<List<Item>>(json);
+    }
+    
+    //inserting data (different for reading data)
+    cmd.CommandText = "Sql Statement";
+    cmd.ExecuteNonQuery();
+    
+    ??need to use prepared statements id info on card is encrypted??
+    
+  }
+}
+    
+    
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+}
+catch(exception)
+{
+
+
+}
