@@ -24,26 +24,3 @@ using(var dbConn = new NpgConn(server, port, userID, userPass, DB))
     
   }
 }
-    
-    
-  
-  
-  
-  
-  
-
-
-
-
-
-
-
-
-
-
-}
-catch(exception)
-{
-
-
-}
