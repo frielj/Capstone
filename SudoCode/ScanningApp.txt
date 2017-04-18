@@ -1,1 +1,40 @@
 
+//Option 1, Initial Setup
+
+  Prompt for  Business_Name
+              Busniess_Location
+              Bussiness_Identifier
+              
+  Check provided input against DB for a participating Business
+      Use NPG connection class
+      
+   If Info is not correct 
+          Loop back to prompt
+          
+   Else
+          Get the serial no. for the card scanner
+              Either through prompt or directly from the hardware
+              
+              
+   Update the DB with a new business location that includes the scanner serial no.
+   
+   
+   Go back to options to allow scanning of cards
+   
+
+
+************************************************
+
+//Option 2, Scan Cards for Rewards
+
+  Grab and store the serial no. for the scanner
+      via prompt or directly from hardware
+      
+  Event handler to launch when a card is scanned
+      grabs info from card 
+      sends info to db class 
+      ////////excerpt for connecting to db and inserting card info located in dbconnect file//////////
+      
+      if db update fails, error message pops up
+      
+      go back to event handler.
